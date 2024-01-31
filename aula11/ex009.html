@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+<body>
+    <h1>Seu país </h1>
+    Onde você nasceu <input type="text" name="txtps" id="txtps">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id="pp">
+
+    </div>
+
+
+    <script>
+    function ver() {
+        var lugar = window.document.querySelector('input#txtps')
+        var pp = window.document.querySelector('div#pp')
+        var s = String(lugar.value)
+        pp.innerHTML = `Seu país é ${s}`
+        if (s == 'Brasil') {
+            pp.innerHTML += `<p>Você é Brasileiro!</p>`
+        }
+        else{
+            pp.innerHTML += `<p>Você é Estrangeiro</P>`
+        }
+
+       
+
+    }
+    </script>   
+</body>
+</html>
