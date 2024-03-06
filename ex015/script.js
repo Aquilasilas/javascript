@@ -9,4 +9,11 @@ function verificar(){
      else{
         window.alert('Tudo ok')
      }
+
+     var fsex = document.getElementsByTagName('radsex')
+     var idade = ano - Number(fano.value)
+     var gênero = ''
+     if(fsex[0].checked){
+      gènero = 'Home'
+     }
 }
