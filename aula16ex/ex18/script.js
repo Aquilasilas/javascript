@@ -12,7 +12,7 @@ function isNumero(n){
 }
 
 function inLista(n, l){
-    if(l.indexOf(Number(n))!= -1 ) {
+    if(l.indexOf(Number(n)) != -1 ) {
         return true
     } else{
         return false
@@ -37,9 +37,29 @@ function finalizar() {
         window.alert('Adicione valores antes de finalozar!')
     } else{
         let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for(let pos in valores){
+            soma += valores[pos]
+            media += valores[pos] / valores.length
+            if(valores[pos] > maior)
+                maior = valores[pos]
+             if(valores[pos] < menor)
+                    menor = valores[pos] 
+        }
+
+        /*ou eu posso fazer assim 
+        meida = soma / tot
+        */
 
         res.innerHTML = '' 
         res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+        res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p> Somando todos os valores, temos ${soma}.</p>`
+        res.innerHTML += `<p>A meida dos valores é ${media}.</p>`
     }
 }
   
